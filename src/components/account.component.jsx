@@ -22,7 +22,7 @@ const Account = ({ currentUser, inverted, signOutStart }) => {
 
     return (
         <div className="w-auto flex flex-col items-end justify-start">
-            <button className={`w-auto focus:outline-none border-2 border-red-500 rounded-lg`}>
+            <button className={`w-auto focus:outline-none border border-red-500 rounded`}>
                 <div onClick={() => setToggleWidth(!toggleWidth)} className={`flex items-center justify-center ${inverted ? 'text-red-600' : 'text-white'} px-6 `}>
                     <span className={`mr-2 text-sm font-sans ${inverted ? 'text-gray-700' : 'text-gray-100'}`}>{shortName().toUpperCase()}</span>
                     <span className={`transition duration-500 delay-100 ease-in-out transform ${toggleWidth ? 'rotate-180' : '-rotate-0'}`}><i className="fa fa-caret-down" aria-hidden="true"></i></span>

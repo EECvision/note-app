@@ -1,24 +1,24 @@
 import CustomButton from './custom-button.component';
 import { Link } from 'react-router-dom';
+import iconTodo from '../assets/icon-todo.svg';
 
-const Banner =()=>(
-    <div className="w-full max-w-lg flex flex-col items-center justify-center mb-16 px-4">
-        <div className="w-full flex flex-col items-center justify-center">
-            <div className="text-5xl text-red-700 font-medium text-center leading-none font-serif mb-6">Life is worth more when put together</div>
-            <div className="flex flex-col items-center justify-center mb-6">
-                <div className="text-center text-gray-700 md:text-lg text-base mb-4">Noteon is a user friendly application that helps you to connect the events going around you together with ease of access from any device, any where</div>
-                <div className="text-center text-gray-700 md:text-lg text-base bg-yellow-200">The secret of all intelligence is in history</div>
-            </div>
-            <div className="flex flex-col items-center text-lg justify-center">
-                <div className="flex items-center text-center text-gray-700 text-sm mb-4">
-                    Connect your past present and future in just words with Noteon!
-                </div>
-                <Link to='account/signIn'>
-                    <CustomButton>Start free</CustomButton>
-                </Link>
-            </div>
+const Banner = () => (
+  <div className="w-full flex justify-center items-center px-4 sm:px-24 2xl:px-0">
+    <div className="w-full max-w-screen-lg  flex flex-col md:flex-row items-center justify-between">
+      <div className="w-full md:max-w-lg flex flex-col justify-center items-start mb-12 md:mb-0">
+        <div className="w-full flex flex-col justify-center items-center md:items-start mb-8">
+          <span className="w-full text-4xl md:text-5xl leading-tight text-red-600 text-left font-serif mb-4">Life is worth more when put together</span>
+          <span className="w-full text-xl md:text-left text-gray-700 font-sans">Connect the events going around you together with ease of access from any device and anywhere.</span>
         </div>
+        <Link to='account/signIn'>
+          <CustomButton>Start free</CustomButton>
+        </Link>
+      </div>
+      <div className="w-full md:max-w-xl flex items-center justify-end border border-gray-300 rounded">
+        <img className="w-full" src={iconTodo} alt="team work" />
+      </div>
     </div>
+  </div>
 );
 
 export default Banner
