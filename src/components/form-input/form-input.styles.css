@@ -1,0 +1,17 @@
+.form-input-label{
+    pointer-events: none;
+    transition: 300ms ease all;
+}
+
+.form-input:focus + .form-input-label{
+    transform: translateY(-30px);
+    font-size: small;
+}
+
+.form-input-label.shrink{
+    transform: translateY(-30px);
+    font-size: small;
+}
+
+
+
