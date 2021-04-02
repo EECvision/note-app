@@ -26,7 +26,7 @@ class NoteDisplay extends React.Component {
             <div className="relative w-full flex flex-col items-center justify-start bg-white">
                 <div style={{ height: "24rem" }} className="absolute w-full flex flex-col items-center justify-start bg-red-600 lg:h-auto">
                     <div className="w-full z-50 fixed top-0 left-0 bg-red-600"><MainPageHeader /></div>
-                    <div className="w-full hidden md:flex justify-between items-end">
+                    <div className="w-full hidden md:flex justify-between items-end mt-16">
                         <img className={`w-64 transform translate-x-4`} src={iconNoteB} alt="icon" />
                         <img className="w-64 " src={iconNote} alt="icon" />
                     </div>

@@ -68,3 +68,7 @@ export const setVerificatonMessage = () => ({
     type: userActionType.SET_VERIFICATION_MESSAGE,
     payload: false
 })
+
+export const resetError = () => ({
+    type: userActionType.RESET_ERROR,
+})

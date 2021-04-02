@@ -17,7 +17,7 @@ const Header = ({ currentUser, history }) => {
   }
 
   return (
-    <div className="w-full flex items-center justify-center border-b-2 border-gray-300 px-2 md:px-12 md:mb-16 mb-8">
+    <div className="w-full z-50 fixed top-0 left-0 flex items-center justify-center border-b-2 border-gray-300 px-2 md:px-12">
       <div className="w-full max-w-screen-xl flex items-center justify-between bg-white py-2">
         <Link to='/'>
           <CustomLogo />

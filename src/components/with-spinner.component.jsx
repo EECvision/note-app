@@ -9,7 +9,9 @@ const WithSpinner = WrappedComponent =>{
                 {
                     loading 
                     ? 
-                    <div className="text-blue-500 text-4xl font-bold">Loading...</div>
+                    <div style={{background: "rbg(0, 0, 0, 0.9)"}} className="absolute left-0 top-0 w-screen h-screen flex items-center justify-center">
+                         <i className="text-blue-500 text-4xl font-bold fas fa-circle-notch fa-spin"></i>
+                    </div>
                     :
                     <WrappedComponent {...otherProps} />
                 }
