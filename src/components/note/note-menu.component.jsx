@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NoteItem from './note-item.component';
 import { createStructuredSelector } from 'reselect';
 import { selectNotes } from '../../redux/note/note-selectors';
@@ -6,31 +6,31 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const NoteMenu = ({ notes, history, match }) => {
-  const [typing, setTyping] = useState('');
+  // const [typing, setTyping] = useState('');
   const [windowWidth, setWidth] = useState(window.innerWidth);
 
-  useEffect(()=>{
-    type();
-    const removeResize = window.addEventListener("resize", () => {
-      setWidth(window.innerWidth)
-    })
-    return () => (removeResize)
-  },[])
+  // useEffect(()=>{
+  //   type();
+  //   const removeResize = window.addEventListener("resize", () => {
+  //     setWidth(window.innerWidth)
+  //   })
+  //   return () => (removeResize)
+  // },[])
   
-  async function type() {
-    let txt = 'Note taking is fun!';
-    for (let i = 0; i < txt.length; i++) {
-      await typeWriter(txt, i)
-    }
-  }
+  // async function type() {
+  //   let txt = 'Note taking is fun!';
+  //   for (let i = 0; i < txt.length; i++) {
+  //     await typeWriter(txt, i)
+  //   }
+  // }
 
-  function typeWriter(txt, i){
-    return new Promise( resolve => {
-      setTimeout(() => {
-        resolve(setTyping(t => t + txt.charAt(i)))
-      }, 100);
-    })
-  }
+  // function typeWriter(txt, i){
+  //   return new Promise( resolve => {
+  //     setTimeout(() => {
+  //       resolve(setTyping(t => t + txt.charAt(i)))
+  //     }, 100);
+  //   })
+  // }
 
   const handleClick = () => {
     history.push(`${match.path}/write`)
@@ -52,7 +52,7 @@ const NoteMenu = ({ notes, history, match }) => {
               <div className="w-full md:max-w-xs md:mx-1 lg:mx-2  h-56 flex flex-col justify-start items-center cursor-pointer bg-white rounded-lg border-2 border-gray-300 shadow-lg mb-4 pb-4 pt-6 px-4">
                 <div className="w-full border-b-2 border-orange-600 text-gray-700 focus:outline-none text-lg py-4 font-serif break-words mb-4">Note-on: </div>
                 <div className="w-full flex items-center justify-between text-left text-2xl text-gray-700">
-                  {typing}
+                  Note taking is fun!
                 </div>
               </div>
               : null
