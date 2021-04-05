@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NoteItem from './note-item.component';
 import { createStructuredSelector } from 'reselect';
 import { selectNotes } from '../../redux/note/note-selectors';
@@ -9,13 +9,13 @@ const NoteMenu = ({ notes, history, match }) => {
   // const [typing, setTyping] = useState('');
   const [windowWidth, setWidth] = useState(window.innerWidth);
 
-  // useEffect(()=>{
-  //   type();
-  //   const removeResize = window.addEventListener("resize", () => {
-  //     setWidth(window.innerWidth)
-  //   })
-  //   return () => (removeResize)
-  // },[])
+  useEffect(()=>{
+    // type();
+    const removeResize = window.addEventListener("resize", () => {
+      setWidth(window.innerWidth)
+    })
+    return () => (removeResize)
+  },[])
   
   // async function type() {
   //   let txt = 'Note taking is fun!';
