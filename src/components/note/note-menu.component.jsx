@@ -48,7 +48,7 @@ const NoteMenu = ({ notes, history, match }) => {
             Add Note
           </div>
           {
-            !notes.length && windowWidth <= 768
+            !notes || (!notes.length && windowWidth <= 768)
               ?
               <div className="w-full md:max-w-xs md:mx-1 lg:mx-2  h-56 flex flex-col justify-start items-center cursor-pointer bg-white rounded-lg border-2 border-gray-300 shadow-lg mb-4 pb-4 pt-6 px-4">
                 <div className="w-full border-b-2 border-orange-600 text-gray-700 focus:outline-none text-lg py-4 font-serif break-words mb-4">Note-on: </div>
