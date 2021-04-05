@@ -12,6 +12,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case userActionType.EMAIL_SIGN_IN_START:
         case userActionType.GOOGLE_SIGN_IN_START:
+        case userActionType.SIGN_UP_START:
             return {
                 ...state,
                 isLoading: true
@@ -33,7 +34,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 newUser: action.payload,
-                error: null
+                error: null,
+                isLoading: false
             }
         case userActionType.VERFIY_USER_SUCCESS:
             return {

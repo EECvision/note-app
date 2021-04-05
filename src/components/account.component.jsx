@@ -30,15 +30,15 @@ const Account = ({ currentUser, inverted, signOutStart }) => {
             </button>
             <div className={`w-full absolute ${toggleWidth ? 'flex' : 'hidden'} top-0 left-0 z-50 justify-end transition-all duration-300 ease-in-out mt-20 px-4`}>
                 <div className="w-full sm:w-64 rounded-t-md overflow-hidden bg-orange-100 border-b-2 border-orange-500">
-                    <div className="w-full py-16 flex flex-col items-center justify-center bg-orange-300">
+                    <div className="w-full py-10 flex flex-col items-center justify-center bg-orange-300">
                         <div className="w-full flex flex-col items-center justify-center my-4">
                             <div className="text-gray-700 font-medium font-sans">{currentUser.displayName}</div>
                             <div className="text-gray-700 font-serif text-sm">{currentUser.email}</div>
                         </div>
-                        <div className="cursor-pointer text-gray-700 text-base text-center bg-orange-100 rounded px-2 md:px-6 py-0 md:py-1 font-sans shadow-lg border-b-2 border-gray-500">Manage your Account</div>
+                        {/* <div className="cursor-pointer text-gray-700 text-base text-center bg-orange-100 rounded px-2 md:px-6 py-0 md:py-1 font-sans shadow-lg border-b-2 border-gray-500">Manage your Account</div> */}
                     </div>
-                    <div className="w-full cursor-pointer flex items-center justify-start px-4 py-12 text-gray-600 hover:text-gray-700 text-base font-serif">
-                        <div onClick={() => handleSignOut()}>Sign Out</div>
+                    <div className="w-full flex items-center justify-start px-4 py-12">
+                        <div className="w-auto cursor-pointer text-gray-600 hover:text-yellow-800 text-base font-serif" onClick={() => handleSignOut()}>Sign Out</div>
                     </div>
                 </div>
             </div>
