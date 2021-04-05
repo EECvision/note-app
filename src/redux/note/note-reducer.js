@@ -3,7 +3,7 @@ import { addNote, deleteNote } from './note.utils';
 
 const INITIAL_STATE = {
     currentNote: null,
-    notes: null,
+    notes: [],
     isFetching: false,
     isSaving: 'Save',
     isUpdating: 'Update',
