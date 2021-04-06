@@ -7,10 +7,10 @@ const EmailVerificationMessage =({history, sendMessage })=>(
     <div className="w-full max-w-lg flex flex-col items-start justify-evenly border-2 border-gray-300 rounded p-6">
         <div className="w-full text-left text-xl text-gray-700 font-serif mb-12">Check your email</div>
         <div className="w-full text-left mb-6 text-gray-600 font-sans">
-            A verification message was sent whitch contains a link
+            A verification message was sent which contain a link
             to activate your account 
-            Check your spanm folder if you haven't received an
-            email wihtin 3 minutes
+            Check your spam folder if you haven't received an
+            email within 3 minutes
         </div>
         <button 
             onClick={()=>{ sendMessage() ; history.push('/account/signin')}}

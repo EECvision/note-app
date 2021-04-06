@@ -7,10 +7,14 @@ import { signOutStart } from '../redux/user/user-actions';
 
 const Account = ({ currentUser, inverted, signOutStart }) => {
     const [toggleWidth, setToggleWidth] = useState(false)
-
+    const [loading, setLoading] = useState('')
     const handleSignOut = () => {
         window.sessionStorage.reload = "false";
-        signOutStart()
+        setLoading('...')
+        setTimeout(() => {
+            setLoading('')
+            signOutStart()
+        }, 1000);
     }
 
     const shortName = () => {
@@ -38,7 +42,7 @@ const Account = ({ currentUser, inverted, signOutStart }) => {
                         {/* <div className="cursor-pointer text-gray-700 text-base text-center bg-orange-100 rounded px-2 md:px-6 py-0 md:py-1 font-sans shadow-lg border-b-2 border-gray-500">Manage your Account</div> */}
                     </div>
                     <div className="w-full flex items-center justify-start px-4 py-12">
-                        <div className="w-auto cursor-pointer text-gray-600 hover:text-yellow-800 text-base font-serif" onClick={() => handleSignOut()}>Sign Out</div>
+                        <div className="w-auto cursor-pointer text-gray-600 hover:text-yellow-800 text-base font-serif" onClick={() => handleSignOut()}>Sign Out{loading}</div>
                     </div>
                 </div>
             </div>

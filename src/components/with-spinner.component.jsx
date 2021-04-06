@@ -5,7 +5,7 @@ const WithSpinner = WrappedComponent =>{
     const Spinner =({loading, ...otherProps})=>{
 
         return(
-            <div>
+            <div className="w-full">
                 {
                     loading 
                     ? 

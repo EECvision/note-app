@@ -28,6 +28,7 @@ const Login = ({ history, match, googleSignInStart, emailSignInStart, error, new
   }
 
   return (
+    <div className="w-full flex items-center justify-center">
     <div className="w-full md:max-w-lg flex flex-col items-center justify-center">
       {
         error
@@ -73,6 +74,7 @@ const Login = ({ history, match, googleSignInStart, emailSignInStart, error, new
           </div>
         </div>
       </form>
+    </div>
     </div>
   )
 }
