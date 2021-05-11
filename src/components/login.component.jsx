@@ -45,7 +45,7 @@ const Login = ({ history, match, googleSignInStart, emailSignInStart, error, new
           </div>
           : null
       }
-      <form onSubmit={(event) => handleSubmit(event)} className="w-full flex flex-col items-start justify-evenly border-2 border-white  md:border-gray-300 shadow-lg px-4 md:p-8">
+      <form onSubmit={(event) => handleSubmit(event)} className="w-full flex flex-col items-start justify-evenly border-2 border-white  md:border-gray-300 md:shadow-lg px-4 md:p-8">
         <FormInput
           type="email"
           name="email"

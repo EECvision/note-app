@@ -37,7 +37,7 @@ const Header = ({ currentUser, history }) => {
                 <div onClick={handleClick} className="hidden md:block">
                   <CustomButton>Go to desk</CustomButton>
                 </div>
-                <div onClick={() => history.push('/account/signin')} className="cursor-pointer  border-b-4 border-white hover:border-red-600 mx-4 py-2 font-medium text-gray-600 text-center">Sign in</div>
+                <div onClick={() => history.push('/account/signin')} className="cursor-pointer  border-b-4 border-white hover:border-red-600 mx-4 py-2 font-medium text-gray-700 text-center">Sign in</div>
               </>
           }
         </div>

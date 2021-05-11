@@ -59,8 +59,8 @@ class SignUpForm extends React.Component {
             ?
             <EmailVerificationMessage />
             :
-            <div className="w-full flex flex-col items-center justify-center">
-              <form onSubmit={this.handleSubmit} className="w-full md:max-w-lg flex flex-col items-start justify-evenly border-2 border-gray-300 shadow-lg px-4 md:p-10">
+            <div className="w-full flex flex-col items-center justify-center mb-12 md:mb-0">
+              <form onSubmit={this.handleSubmit} className="w-full md:max-w-lg flex flex-col items-start justify-evenly border-2 border-white md:border-gray-300 md:shadow-lg px-4 md:p-10">
                 <FormInput
                   type="text"
                   name="displayName"
