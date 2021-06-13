@@ -28,8 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./client/src/assets/preview-note.png)
-
+![](./src/assets/preview-note.png)
 
 ### Links
 
